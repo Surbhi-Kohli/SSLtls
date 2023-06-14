@@ -9,6 +9,6 @@ Protocol used here is HTTP and port is 80.The port is TCP port.
 
 <img width="1240" alt="Screenshot 2023-06-12 at 9 34 25 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/328ecf95-fbb4-49cd-ac7e-46dfe6f21caa">
 HTTPs:
-PORT is 443 which is a tcp port.
+PORT is 443 which is a tcp port.All data is send using tls(Transport layer security) which is responsible for a secure session
 
 <img width="1182" alt="Screenshot 2023-06-12 at 9 38 44 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/4a1f2c3f-93e3-464a-b2d2-9adc89129031">
