@@ -17,7 +17,8 @@ AES is used in SSL communication via HTTPS protocol.
 
 ## Hashing Overview
 Before we have discussed encryption algorithms and symmetric key encryption. Encryption is usually done for making data unreadable for third party.
-And of course, this data that is encrypted, transferred over network could be easily changed, compromised or something like that.That will lead to a situation when the receiver will not be able to read original data or will read it with some errors.Thats where hashing comes into picture.
+And of course, this data that is encrypted, transferred over network could be easily changed, compromised or something like that.That will lead to a situation when the receiver will not be able to read original data or will read it with some errors.Thats where hashing comes into picture.  
+
 What is a hash?  
 Hash is a fixed length string(maybe 128 bit or 160 bit),And this length depends on the algorithm that is used to for creation of the hash. 
 
