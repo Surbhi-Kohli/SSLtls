@@ -19,7 +19,7 @@ AES is used in SSL communication via HTTPS protocol.
 Before we have discussed encryption algorithms and symmetric key encryption. Encryption is usually done for making data unreadable for third party.
 And of course, this data that is encrypted, transferred over network could be easily changed, compromised or something like that.That will lead to a situation when the receiver will not be able to read original data or will read it with some errors.Thats where hashing comes into picture.  
 
-What is a hash?  
+What is a hash?    
 Hash is a fixed length string(maybe 128 bit or 160 bit),And this length depends on the algorithm that is used to for creation of the hash. 
 
 <img width="437" alt="Screenshot 2023-06-14 at 1 23 20 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/8fbcdd05-c3be-4afd-919a-3cad172a75a8">
@@ -31,7 +31,8 @@ Another important characteristic of hash function is that each time when you sli
 What we accomplish using keys is following:We perform not just the integrity check on the receiver, we also perform authentication of sender.It means that if on the receiver  side we take data,key  to create hash and compare it with received hash and those hashes match, we can be sure that the hash that we have received was created by a party that owns same key as we do.But again, please notice that the keys are optional.
 
 
-Why do we need hash and hash function??
+Why do we need hash and hash function??  
+
 Consider that you have data ,on which you apply hash function and you get a hash.Now you send   data + hash across the network to reciever.Now receiver takes data and applies same hash function on data and then compares the hash that it got with hash that it generated.And if those hashes match, it means for receiver that this data was not changed or was not mutated during transfer over network.Hash verifies integrity of data(what if data is changed and still same hash is generated?? loophole..doubt)
 Also we should also be encripting the data and then create a hash of it.
 Hash algorithms work in such a way that even small change of data will lead to creation of completely  different hash.
