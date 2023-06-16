@@ -33,8 +33,46 @@ What we accomplish using keys is following:We perform not just the integrity che
 
 Why do we need hash and hash function??  
 
-Consider that you have data ,on which you apply hash function and you get a hash.Now you send   data + hash across the network to reciever.Now receiver takes data and applies same hash function on data and then compares the hash that it got with hash that it generated.And if those hashes match, it means for receiver that this data was not changed or was not mutated during transfer over network.Hash verifies integrity of data(what if data is changed and still same hash is generated?? loophole..doubt)
+Consider that you have data ,on which you apply hash function and you get a hash.Now you send   data + hash across the network to reciever.Now receiver takes data and applies same hash function on data and then compares the hash that it got with hash that it generated.And if those hashes match, it means for receiver that this data was not changed or was not mutated during transfer over network.Hash verifies integrity of data(what if data is changed and still same hash is generated?? loophole..doubt)  
 Also we should also be encripting the data and then create a hash of it.
 Hash algorithms work in such a way that even small change of data will lead to creation of completely  different hash.
 
-RSA is assymetric encryption algo
+Q.The sender is sending both "data" and "hash".  If someone in the middle wants to change the content, why can't he send the "modified data" and "modified hash" in the packet?  In this way they can modify right?
+A.if we talk about general MD5 or SHA1 hashing algorithms then what you have written is true.It is very simple to re-generate hash after modification of data.
+Such plain hashing algorithms are used for example for storage of the passwords in DBs.But for data integrity additional key is added to the hashing process and without knowing this key it's not possible to generate correct hash for the modified data.
+
+<img width="788" alt="Screenshot 2023-06-16 at 10 13 42 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/37f3bdb1-4947-4c48-b052-8aefa4f9d730">
+## MD5
+MD5 creates fixed length hash of 128 bit from any length of input data.It has many use cases.Again, a goal of the hash algorithm is to create one way hash and other sites may perform the same actions or take input data, create hash and compare it to hashes.And if hashes match, then data was not mutated, was not changed.
+
+For example, hashing is often used for password storage, password that was enteredby user somewhere in any application or on any website may be stored not as a plain text password instead as hash.And each time when user enters its password, website or application creates a hash again and compares that hash with a hash that are stored in database.And if there is a match, we can be sure that the user has entered password correctly.
+
+## MD5 algo in action
+Open terminal and create a file .Then generate md5 hash for that file.  
+<img width="483" alt="Screenshot 2023-06-16 at 10 34 50 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/519200a8-37df-4907-b3af-86cb3f113dfa">
+You see that `md5 file1.txt` will generate a hash for the file.
+If we open the file and add some text within and regenerate hash, we see that a different hash is generated.
+
+<img width="1008" alt="Screenshot 2023-06-16 at 10 38 09 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/dc5b4bbc-8ec2-4fd1-89ea-11d80a601366">
+Hence we see that the hash function within mac generates hash based on content of file.
+Bothe the hashes are of 128bits.What we see here are hexadecimal numbers.Each hexadecimal number is 4 bits long.The generated hash has 32 hexa chars and hence 128 bits.
+
+## SHA hashing algo:
+The sha algo has different versions eg SHA-1(160 bits hash) , SHA-256, SHA-512.Most popular is SHA-256 which generates a hash of 256 bits.
+
+SHA in action
+<img width="575" alt="Screenshot 2023-06-16 at 10 51 23 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/a14f9879-f9c4-4990-89bc-f9e6fd155bbd">
+The above generates a 160 bits long or 40 hex chars.
+To generate hash of 256 bits, we use `shasum -a 256`
+<img width="557" alt="Screenshot 2023-06-16 at 10 54 57 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/3bdb5a51-0d51-4be4-8757-27f1a812f14f">
+We get hash with longer length.
+We can also try with `shasum -a 500 <file name>`
+Also keep in mind that each time the contents of file are changed, the generated hash will be different.
+
+## HMAC algorithm:
+HMAC algo may be used standalone but it is usually used in combination with either md5 or sha algo.The main purpose of this algo is adding special secret key into hashing process.And it means that with HMAC algorithm, we take not just input data.We also take a special secret key or password and utilize it during the creation of the hash.
+
+For HMAC, Data+ secret key ==> hash
+And with HMAC algorithm, we create hash that is based not just on data but also on secret password.And that means that the other side may create same has only if it has same secret key.And therefore this algorithm adds additional level of security and it also allows us to perform authentication of the sender.
+
+RSA is assymetric encryption 
