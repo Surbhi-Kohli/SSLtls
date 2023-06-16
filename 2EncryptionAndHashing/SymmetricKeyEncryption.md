@@ -1,8 +1,8 @@
-Encryption is one of the essential applications of cryptography. It is used to make data incomprehensible to ensure confidentiality. It’s also widely used over the internet by using modern encryption technologies such as SSL/TLS
+ Encryption is one of the essential applications of cryptography. It is used to make data incomprehensible to ensure confidentiality. It’s also widely used over the internet by using modern encryption technologies such as SSL/TLS
 
 ## Symmetric encryption
 
-Symmetric encryption is the encryption method which involves one secret key to cipher and decipher the information. It’s one of the old techniques, which uses numbers, words, or strings of random alphabets as a secret key.The data is encrypted on one side using a special key and  then encrypted data is sent to another
+Symmetric encryption is the encryption method which involves one secret key to cipher and decipher the information. It’s one of the old techniques, which uses numbers, words, or strings of random alphabets as a secret key.The data is encrypted on one side using a special key and  then encrypted data is sent to anothe r
 side and that another side decrypts received data using the same key.
 However, to encrypt and decrypt the message, the recipient must be aware of the secret key. 
 Any person or any machine that owns this game has ability to decrypt encrypted data and gain access to original data.And that is a drawback of symmetric encryption.
@@ -60,10 +60,10 @@ Bothe the hashes are of 128bits.What we see here are hexadecimal numbers.Each he
 ## SHA hashing algo:
 The sha algo has different versions eg SHA-1(160 bits hash) , SHA-256, SHA-512.Most popular is SHA-256 which generates a hash of 256 bits.
 
-SHA in action
+SHA in action  
 <img width="575" alt="Screenshot 2023-06-16 at 10 51 23 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/a14f9879-f9c4-4990-89bc-f9e6fd155bbd">
 The above generates a 160 bits long or 40 hex chars.
-To generate hash of 256 bits, we use `shasum -a 256`
+To generate hash of 256 bits, we use `shasum -a 256`  
 <img width="557" alt="Screenshot 2023-06-16 at 10 54 57 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/3bdb5a51-0d51-4be4-8757-27f1a812f14f">
 We get hash with longer length.
 We can also try with `shasum -a 500 <file name>`
