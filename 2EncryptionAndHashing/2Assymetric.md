@@ -4,8 +4,9 @@ Pair of 2 keys:private and public,which usually have same length.
 
 **Private key** is always kept secret and only the owner of private key has its info.  
 **Public Key** can be shared with anyone.
-But what is the purpose of 2 keys??
-     * The pair can be used for encryption,where public key is used to encrypt data which can only be decrypted by a private key.
+But what is the purpose of 2 keys??  
+
+     * The pair can be used for encryption,where public key is used to encrypt data which can only be decrypted by a private key.  
      * Signing data using private key:Owner of keys signs data, or creates a hash in other words, using the private key .And then anyone who has public key ,may 
        verify the signature.
 
