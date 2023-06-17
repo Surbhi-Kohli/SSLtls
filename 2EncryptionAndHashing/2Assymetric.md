@@ -41,7 +41,7 @@ Private key must always be kept a secret and if you feel that the private key go
 RSA is system that allows you to perform different actions based on assymetric keys.
 ## PKI - Public Key Infrastructure overview
 
-PKI is public key infrastructure and the PGI is actually a set of different protocols, algorithms,and its certificates that allow you to perform communication based on certificates, based on trust.And using those trust relations, you could perform encryption of data, you can perform authentication
+PKI is public key infrastructure and it is actually a set of different protocols, algorithms,and its certificates that allow you to perform communication based on certificates, based on trust.And using those trust relations, you could perform encryption of data, you can perform authentication
 of the server you are communicating with and so on.  
 <img width="622" alt="Screenshot 2023-06-17 at 2 04 19 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/8d8cc276-5b6a-4930-ad2a-2dee6e63da8b">
 There are many elements in PKI infrastructure eg CA= Certification Authority.The role of CA is to either sign certificates or delegate trust to other entities and those entities are called Intermediate CA.Usually the main responsibility of Intermediate CAs is signature of new certificates that are issued for other entities eg for your website.And of course, there are different owners of certificates .  
