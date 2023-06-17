@@ -1,4 +1,4 @@
-<img width="466" alt="Screenshot 2023-06-16 at 11 17 09 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/9f609c60-8407-42bc-ad1d-7b5fcd1b954e">  
+ <img width="466" alt="Screenshot 2023-06-16 at 11 17 09 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/9f609c60-8407-42bc-ad1d-7b5fcd1b954e">  
 
 Pair of 2 keys:private and public,which usually have same length.
 
@@ -12,7 +12,7 @@ But what is the purpose of 2 keys??
 
 ## Encrption using Assymetric keys:     
 
-<img width="675" alt="Screenshot 2023-06-16 at 11 33 59 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/3bb59a6d-cce7-467b-8601-31988edeb842">
+<img width="675" alt="Screenshot 2023-06-16 at 11 33 59 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/3bb59a6d-cce7-467b-8601-31988edeb842"> 
 
 Here as per the above image, only owner has the private key.Data is encrypted by public key.It can be decrypted only by private key which is there only with the owner
 
@@ -26,5 +26,17 @@ But here, we have not encrypted the data and hence it can be viewed on the way, 
 
 This process is very important because that's what exactly happens when server sends a certificate to the client.Each certificate contains signature of the owner of certificate and the signature is verified exactly in the above mentioned way.
 
-Q.how a Client gets a public key in a first place? If a Client downloads a public key from somewhere then how it can be sure that the key was not substituted by someone else in middle of the road?
+Q.how a Client gets a public key in a first place? If a Client downloads a public key from somewhere then how it can be sure that the key was not substituted by someone else in middle of the road?  
+
 a.if we talk about establishment of the TLS session, then public key is located in the TLS certificate that is presented by the server to the client at the beginning of the TLS session setup.And the browser trust the certificate if and only if it's been issued by CA.
+
+## RSA overview: 
+The single main protocol that is primarily used in modern networks and cert communications is called RSA protocol.
+ <img width="685" alt="Screenshot 2023-06-17 at 1 33 03 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/ae6a1c34-c36f-41ac-a777-fb105f3b93ef">  
+  RSA is not just a simple protocol, it is actually public-key crypto system.
+ With RSA , you can create private, public key pairs,create pairs with different lengths,perform encryption, decryption ,sign data and so on.Lengths of RSa keys is between 1024 and 4096, but primarily 2048 bits keys are used.And please note that the key length is always the same for private and public key, because each time when you generate Key pair, both keys are generated together and you are not able to generate only private key or only public key.
+
+Private key must always be kept a secret and if you feel that the private key got compromised,you can generate a new pair.And if you need a certificate based on that pair, you need to recreate certificate as well.
+
+
+## PKI - Public Key Infrastructure overview
