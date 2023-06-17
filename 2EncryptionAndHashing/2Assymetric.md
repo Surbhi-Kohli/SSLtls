@@ -24,7 +24,7 @@ The below scenario is used when we want the receiver to be sure that the data th
 
 But here, we have not encrypted the data and hence it can be viewed on the way, if not tempered.Here we are just talking about signing.We will talk about signing and encrypting data later.
 
-
+This process is very important because that's what exactly happens when server sends a certificate to the client.Each certificate contains signature of the owner of certificate and the signature is verified exactly in the above mentioned way.
 
 Q.how a Client gets a public key in a first place? If a Client downloads a public key from somewhere then how it can be sure that the key was not substituted by someone else in middle of the road?
 a.if we talk about establishment of the TLS session, then public key is located in the TLS certificate that is presented by the server to the client at the beginning of the TLS session setup.And the browser trust the certificate if and only if it's been issued by CA.
