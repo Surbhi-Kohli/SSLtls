@@ -38,5 +38,34 @@ The single main protocol that is primarily used in modern networks and cert comm
 
 Private key must always be kept a secret and if you feel that the private key got compromised,you can generate a new pair.And if you need a certificate based on that pair, you need to recreate certificate as well.
 
-
+RSA is system that allows you to perform different actions based on assymetric keys.
 ## PKI - Public Key Infrastructure overview
+
+PKI is public key infrastructure and the PGI is actually a set of different protocols, algorithms,and its certificates that allow you to perform communication based on certificates, based on trust.And using those trust relations, you could perform encryption of data, you can perform authentication
+of the server you are communicating with and so on.  
+<img width="622" alt="Screenshot 2023-06-17 at 2 04 19 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/8d8cc276-5b6a-4930-ad2a-2dee6e63da8b">
+There are many elements in PKI infrastructure eg CA= Certification Authority.The role of CA is to either sign certificates or delegate trust to other entities and those entities are called Intermediate CA.Usually the main responsibility of Intermediate CAs is signature of new certificates that are issued for other entities eg for your website.And of course, there are different owners of certificates .  
+You can use a certificate for different purposes, for example, you can use certificate for SSL encryption ,ssltls encryption to secure your website.Or you can use certificate to build a VPN virtual private network and send data over internal security
+So there are many different use cases for certificates.
+
+But what is a certificate?
+Certificate is a set of data And most important information that are stored by any certificate is public key of the owner of certificate.
+It means that every entity in PKI infrastructure has its own public key and this public key is always included in every certificate(as shown in image below, intermediaate CA also has its public key).
+
+<img width="571" alt="Screenshot 2023-06-17 at 2 17 47 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/bef76ef5-0403-4989-a6b9-6600f0973d13">
+ Goal of PKI infrastructure is to ensure that public key for every entity in PKI infrastructure is trusted by other entities. And that's why we need CAs, intermediate CS and so on.
+
+ ## Certificate Overview:
+ <img width="428" alt="Screenshot 2023-06-17 at 2 22 48 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/4273573a-b7df-4f11-9aba-9b9a8443471f">
+ Certificate is a digital entity, infact it is a file with some data.Following info is included in the certificate:
+  * Info about the owner of the cert:Usually it may be company name, company address, website and so on. Sometimes even serial number of cert is included  
+       here in this section.
+  *Info about issuer:Find information about entity that signed this certificate and usually here you will find information about certification authority 
+  or intermediate certification authority. Entity that, again, has signed this certificate.
+  *Signature(it is hash encrypted using private key). If certificate was issued by any certification authority or intermediate certification authority, 
+    this signature is made by that authority and based on the signature, we can build a chain of trust.If a certificate is signed by a CA and we trust the 
+   CA,we trust the owner of the certificate too.  **Self signed certificates**:Certificate issued and signed by the owner.The signature is made using the private key of the owner of certificate.  
+* Public Key: And most important information that is stored in each certificate, is public key.So entire goal of certificate is to store public  and this public is owned by owner of certificate,not by the issuer.And of course, in certificate you will not find the private key because private key must always be kept secret.
+
+And every certificate is usually available for public and you can be free to download certificate of any entity in the world.
+Based on certificates, we can build chains of trust.
