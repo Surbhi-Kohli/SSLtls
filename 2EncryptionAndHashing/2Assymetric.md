@@ -1,4 +1,5 @@
-<img width="466" alt="Screenshot 2023-06-16 at 11 17 09 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/9f609c60-8407-42bc-ad1d-7b5fcd1b954e">
+<img width="466" alt="Screenshot 2023-06-16 at 11 17 09 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/9f609c60-8407-42bc-ad1d-7b5fcd1b954e">  
+
 Pair of 2 keys:private and public,which usually have same length.
 
 **Private key** is always kept secret and only the owner of private key has its info.  
