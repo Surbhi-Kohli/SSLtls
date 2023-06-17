@@ -6,8 +6,8 @@ Pair of 2 keys:private and public,which usually have same length.
 **Public Key** can be shared with anyone.
 But what is the purpose of 2 keys??  
 
-     * The pair can be used for encryption,where public key is used to encrypt data which can only be decrypted by a private key.  
-     * Signing data using private key:Owner of keys signs data, or creates a hash in other words, using the private key .And then anyone who has public key ,may 
+ * The pair can be used for encryption,where public key is used to encrypt data which can only be decrypted by a private key.  
+ * Signing data using private key:Owner of keys signs data, or creates a hash in other words, using the private key .And then anyone who has public key ,may 
        verify the signature.
 
 ## Encrption using Assymetric keys:     
@@ -18,7 +18,7 @@ Here as per the above image, only owner has the private key.Data is encrypted by
 
 ## Signing data using assymetric keys:
 In the following scenario , data is sent along with encrypted hash.(This is how **data signing** is done)Hash is encrypted using a private key.
-The below scenario is used when we want the receiver to be sure that the data they received was from a genuine owner,who owned the private key.This means ,no one else would be able to send data and hash as what the owner sends.This also imposes data integrity so that no one on the way mutates data or hash, or else the receiver would get to know it when he decrypts hash with key and finds that it is different from hash he himself generates using the data.
+The below scenario is used when we want the receiver to be sure that the data they received was from a genuine owner,who owned the private key.This means ,no one else would be able to send data and hash as what the owner sends..Thats because only genuine owner has the private key to encrypt a has h that can be decrypted by the public key that the owner has.This also imposes data integrity so that no one on the way mutates data or hash, or else the receiver would get to know it when he decrypts hash with key and finds that it is different from hash he himself generates using the data.
 **Signing** is just a way to ensure that we received data from correct sender.
 <img width="635" alt="Screenshot 2023-06-17 at 1 03 52 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/87f79f70-6276-45ae-8102-adeca55a0584">
 
