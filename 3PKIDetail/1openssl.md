@@ -39,7 +39,8 @@ And for that we should add one more option `-out` and then specify name of the f
 You will be prompted for passphrase.You have to enter the same passphrase that you used when creating private key.
 You can finally see the public key that you can share with the world and any person could use this publicly for encryption of the data that is sent to you and only you are able to decrypt it using your private key. 
 
-<img width="561" alt="Screenshot 2023-06-17 at 10 46 45 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/3ba9b569-ccfb-4a2c-bba9-ebaf084abc95">  
+<img width="561" alt="Screenshot 2023-06-17 at 10 46 45 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/3ba9b569-ccfb-4a2c-bba9-ebaf084abc95">    
+
 Public and private key are bound together, and if you want to create another public, you must create another key pair and after that create public key based on your private key.
 
 Lets now create an rsa key of another length.By default the length is  2048bits.    
