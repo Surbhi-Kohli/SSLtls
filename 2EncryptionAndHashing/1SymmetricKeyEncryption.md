@@ -8,6 +8,10 @@ However, to encrypt and decrypt the message, the recipient must be aware of the 
 Any person or any machine that owns this game has ability to decrypt encrypted data and gain access to original data.And that is a drawback of symmetric encryption.
 If you want to use it somewhere for encryption of your data, you should take care of your key.The key should be kept secret and it should not be transferred to any URLs or machines or sent to other people.
 
+<img width="661" alt="Screenshot 2023-06-17 at 1 28 13 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/9129b253-1f98-4640-a339-1032ebab75a9">  
+
+
+
 Some examples of symmetric encryption algorithm are Blowfish, AES, DES,3DES RC4, RC5 and RC6 .DES and 3Des are obsolete.
 For DES, the length of the key is just 56 bits.3DES is a modification of DEs that performs encrytion 3 times.But again, it is vulnerable to different kinds of attacks that give you access to original data. 
 
