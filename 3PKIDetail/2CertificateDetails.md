@@ -7,7 +7,12 @@
 <img width="517" alt="Screenshot 2023-06-18 at 10 46 35 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/694ff056-8134-47e4-8bd0-47b31b4d08a1">
 
 ## Signature details of certificate
-<img width="526" alt="Screenshot 2023-06-18 at 10 57 11 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/b99c4b0b-8506-4bdd-a797-67d0b13fed13">   
-Considering this diagram,our data here is the certificate for which we created the hash
-<img width="454" alt="Screenshot 2023-06-18 at 11 01 36 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/43af3eff-b0cd-4eec-a895-620d5b801d56">
-The private key of intermediate ca was used to encrypt the hash
+<img width="526" alt="Screenshot 2023-06-18 at 10 57 11 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/b99c4b0b-8506-4bdd-a797-67d0b13fed13">     
+
+Considering this diagram,our data here is the certificate for which we created the hash  
+ 
+<img width="454" alt="Screenshot 2023-06-18 at 11 01 36 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/43af3eff-b0cd-4eec-a895-620d5b801d56"> 
+
+The private key of intermediate ca was used to encrypt the hash.You can see the signature below  
+
+<img width="476" alt="Screenshot 2023-06-18 at 11 04 17 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/e1d2d6ce-7c49-49ef-aea1-ec2d985917f3">
