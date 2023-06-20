@@ -2,10 +2,10 @@
 
 ## Symmetric encryption
 
-Symmetric encryption is the encryption method which involves one secret key to cipher and decipher the information. It’s one of the old techniques, which uses numbers, words, or strings of random alphabets as a secret key.The data is encrypted on one side using a special key and  then encrypted data is sent to anothe r
+Symmetric encryption is the encryption method which involves one secret key to cipher and decipher the information. It’s one of the oldest techniques, which uses numbers, words, or strings of random alphabets as a secret key.The data is encrypted on one side using a special key and  then encrypted data is sent to another
 side and that another side decrypts received data using the same key.
 However, to encrypt and decrypt the message, the recipient must be aware of the secret key. 
-Any person or any machine that owns this game has ability to decrypt encrypted data and gain access to original data.And that is a drawback of symmetric encryption.
+Any person or any machine that owns this key has ability to decrypt encrypted data and gain access to original data.And that is a drawback of symmetric encryption.
 If you want to use it somewhere for encryption of your data, you should take care of your key.The key should be kept secret and it should not be transferred to any URLs or machines or sent to other people.
 
 <img width="661" alt="Screenshot 2023-06-17 at 1 28 13 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/9129b253-1f98-4640-a339-1032ebab75a9">  
