@@ -16,3 +16,6 @@ Considering this diagram,our data here is the certificate for which we created t
 The private key of intermediate ca was used to encrypt the hash.You can see the signature below  
 
 <img width="476" alt="Screenshot 2023-06-18 at 11 04 17 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/e1d2d6ce-7c49-49ef-aea1-ec2d985917f3">
+
+## Public Key
+<img width="544" alt="Screenshot 2023-06-21 at 9 20 06 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/a29d7987-25c7-48dd-a81a-02ed0d37493d">
