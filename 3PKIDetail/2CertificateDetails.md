@@ -23,7 +23,7 @@ The private key of intermediate ca was used to encrypt the hash.You can see the 
 
 ## Extension
 <img width="525" alt="Screenshot 2023-06-21 at 9 29 19 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/1c3205e3-987e-4e11-bba5-8e23cd5ca119">
-
+Certificates that are valid for different dns are called multi-domain certificates
 ## Fingerprints
 <img width="565" alt="Screenshot 2023-06-21 at 9 35 02 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/a8493083-d852-46fa-947d-01df06d5afb3">
 
