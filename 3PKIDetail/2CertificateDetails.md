@@ -19,3 +19,11 @@ The private key of intermediate ca was used to encrypt the hash.You can see the 
 
 ## Public Key
 <img width="544" alt="Screenshot 2023-06-21 at 9 20 06 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/a29d7987-25c7-48dd-a81a-02ed0d37493d">
+
+
+## Extension
+<img width="525" alt="Screenshot 2023-06-21 at 9 29 19 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/1c3205e3-987e-4e11-bba5-8e23cd5ca119">
+
+## Fingerprints
+<img width="565" alt="Screenshot 2023-06-21 at 9 35 02 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/a8493083-d852-46fa-947d-01df06d5afb3">
+
