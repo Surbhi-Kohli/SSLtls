@@ -49,4 +49,28 @@ Also , keep in mind, that every entity in the Public Key Infrastructure has a pa
 
 A CSR(Certificate signing request) is created on end user machine and after that sent to Intermediate CA server.The intermediate CA signs the certificate, adds all required info and finally sends it back to the server.It means that signing process always occurs on a machine where private key is located.It means that signing process is secure and reliable 
 
-## Verifiying Chain of trust:How is a certificate verified
+## Verifiying Chain of trust:How is a certificate verified?
+
+So when you open up any Web page and you see HTTPS sign near it, Web server sends you as an ssl certificate.It infact sends its own certificate as well as the certificates of all Intermediate CAs.And then the verification process starts on your end with end user certificate .Your computer looks at current date and compares the validity period of the certificate with your current date.  
+
+Next check is the check of signature.Your computer finds the issuer info from the certificate and tries to find a certificate with that issuer as owner.(Remember that webserver did send certificates of intermediate CAs).Once the certificate with the said owner is found,u look for the public key for that certificate . 
+ 
+1.This key is used to decrypt your end user certificate's signature.  
+2.Web browser then generates hash from the contents of the web server certificate and compares it to the hash retrieved on the step 1.  
+3. If they match - signature is verified
+
+Thats how trust between intermediate CA and end user certificate is established.
+Now you will look at the Issuer info in intermediate certificate.This will give info about the root ca.We will find this certificate in our OS.This root ca's public key will be used to decrypt signature of the intermediate ca certificate.If the match happens as illustrated before,the trust between Root CA and intermediate CA is established.
+
+<img width="1275" alt="Screenshot 2023-06-24 at 10 35 59 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/5703371d-67b1-4fbb-9f2e-cdf1433100b8">
+
+
+That means that entire chain of trust was verified by our computer, and that means that we can proceed and build secure a tunnel with the web server that has offered us this certificate.And at this moment, Web browser will show you here this look icon and it will show that certificate is valid.
+
+
+q. whats is the use of intermediate certificate in chain of trust. Can't the same thing(trust) is achived only with root and domain certificate.
+A.It can be achieved but root certificates must be as secure as possible and have long validity period and be trusted by operating systems all over the world.
+That's why they are not used for signing of domain certificates.
+
+
+<img width="741" alt="Screenshot 2023-06-24 at 11 16 00 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/06a4a711-4fb5-4b19-b358-b82e96d4d166">
