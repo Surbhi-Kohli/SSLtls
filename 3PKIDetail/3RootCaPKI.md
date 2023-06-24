@@ -74,3 +74,4 @@ That's why they are not used for signing of domain certificates.
 
 
 <img width="741" alt="Screenshot 2023-06-24 at 11 16 00 PM" src="https://github.com/Surbhi-Kohli/SSLtls/assets/32058209/06a4a711-4fb5-4b19-b358-b82e96d4d166">
+Cost of Single domain certificates<Cost of wildcard < Cost of multi domain certificates
